@@ -57,6 +57,16 @@ claude mcp add --scope user n8n-mcp \
   -- npx -y n8n-mcp
 ```
 
-### Aviso sobre carga de contexto
+### Lista de desactivación (`skills-disabled.txt`)
 
-Hay 204 skills activas. Si las sesiones se ralentizan, podemos podar borrando symlinks de `~/.claude/skills/` (el plugin clonado se conserva, así que recuperarlas es re-ejecutar `update-skills.sh`).
+`scripts/update-skills.sh` lee `skills-disabled.txt` y omite cualquier skill listada (las elimina si ya estuvieran enlazadas). Hoy hay 60 desactivadas en 5 categorías:
+
+- **A. Duplicados** (3) — versiones inferiores reemplazadas por superpowers/v2
+- **B. Verticales de industria** (14) — logística, salud, energía, scheduling, HIPAA…
+- **C. Finance / Web3 / Crypto** (11) — billing, DeFi, EVM, trading bots…
+- **D. Admin interno de ECC** (14) — auditorías y ops específicas del propio plugin
+- **E. Lenguajes/herramientas nicho** (18) — Perl, Swift v6.2 específico, ClickHouse, dmux…
+
+Quedan **144 skills activas**. Para reactivar una desactivada: borra su línea en `skills-disabled.txt` y ejecuta `bash scripts/update-skills.sh`.
+
+> Nota: cuando haces cambios, los verás reflejados al iniciar una **nueva sesión** de Claude Code (la lista de skills se carga al arranque, no se refresca dinámicamente).

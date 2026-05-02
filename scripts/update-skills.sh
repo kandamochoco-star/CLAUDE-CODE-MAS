@@ -22,6 +22,25 @@ AGENTS_DIR="${CLAUDE_HOME}/agents"
 COMMANDS_DIR="${CLAUDE_HOME}/commands"
 UI_UX_REPO="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git"
 
+# Disable list — names listed here are skipped on relink and removed if present.
+# Resolved relative to this script's directory (repo root).
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+DISABLED_FILE="${SCRIPT_DIR}/skills-disabled.txt"
+
+is_disabled() {
+  [ -f "$DISABLED_FILE" ] || return 1
+  awk -v name="$1" '
+    /^[[:space:]]*#/ { next }
+    /^[[:space:]]*$/ { next }
+    {
+      sub(/[[:space:]]+#.*/, "")     # strip inline comments
+      gsub(/^[[:space:]]+|[[:space:]]+$/, "")
+      if ($0 == name) { found = 1; exit }
+    }
+    END { exit !found }
+  ' "$DISABLED_FILE"
+}
+
 log()  { printf "\033[1;34m[update]\033[0m %s\n" "$*"; }
 warn() { printf "\033[1;33m[warn]\033[0m %s\n" "$*"; }
 ok()   { printf "\033[1;32m[ok]\033[0m %s\n" "$*"; }
@@ -44,6 +63,10 @@ trap 'rm -rf "$TMP_DIR"' EXIT
 if git clone --depth 1 --quiet "$UI_UX_REPO" "$TMP_DIR/ui-ux" 2>/dev/null; then
   for s in "$TMP_DIR"/ui-ux/.claude/skills/*/; do
     name="$(basename "$s")"
+    if is_disabled "$name"; then
+      rm -rf "$SKILLS_DIR/$name"
+      continue
+    fi
     rm -rf "$SKILLS_DIR/$name"
     cp -r "$s" "$SKILLS_DIR/$name"
   done
@@ -81,6 +104,11 @@ link_from() {
       if [ -e "$target" ] && [ ! -L "$target" ]; then
         target="$dst_dir/${prefix}${name}"
       fi
+      target_name="$(basename "$target")"
+      if is_disabled "$target_name"; then
+        rm -f "$target"
+        continue
+      fi
       ln -sfn "$s" "$target"
     done
   else
@@ -90,6 +118,11 @@ link_from() {
       target="$dst_dir/$name"
       if [ -e "$target" ] && [ ! -L "$target" ]; then
         target="$dst_dir/${prefix}${name}"
+      fi
+      target_name="$(basename "$target" .md)"
+      if is_disabled "$target_name"; then
+        rm -f "$target"
+        continue
       fi
       ln -sfn "$f" "$target"
     done
