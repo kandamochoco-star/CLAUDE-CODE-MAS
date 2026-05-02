@@ -7,34 +7,34 @@ continuous-learning            # superseded by continuous-learning-v2
 tdd-workflow                   # superseded by superpowers/test-driven-development
 verification-loop              # superseded by superpowers/verification-before-completion
 
-# ---- B. Industry verticals (re-enable per project) ----
-carrier-relationship-management
-customs-trade-compliance
-energy-procurement
-inventory-demand-planning
-logistics-exception-management
-production-scheduling
-quality-nonconformance
-returns-reverse-logistics
-visa-doc-translate
-healthcare-cdss-patterns
-healthcare-emr-patterns
-healthcare-eval-harness
-healthcare-phi-compliance
-hipaa-compliance
+# ---- B. Industry verticals (RE-ENABLED 2026-05-02 for 300MW project & industrial work) ----
+# carrier-relationship-management
+# customs-trade-compliance
+# energy-procurement
+# inventory-demand-planning
+# logistics-exception-management
+# production-scheduling
+# quality-nonconformance
+# returns-reverse-logistics
+# visa-doc-translate
+# healthcare-cdss-patterns
+# healthcare-emr-patterns
+# healthcare-eval-harness
+# healthcare-phi-compliance
+# hipaa-compliance
 
-# ---- C. Finance / Web3 / Crypto ----
-finance-billing-ops
-customer-billing-ops
-investor-materials
-investor-outreach
-market-research
-lead-intelligence
-llm-trading-agent-security
-defi-amm-security
-evm-token-decimals
-nodejs-keccak256
-agent-payment-x402
+# ---- C. Finance / Web3 / Crypto (RE-ENABLED 2026-05-02 for finance projects) ----
+# finance-billing-ops
+# customer-billing-ops
+# investor-materials
+# investor-outreach
+# market-research
+# lead-intelligence
+# llm-trading-agent-security
+# defi-amm-security
+# evm-token-decimals
+# nodejs-keccak256
+# agent-payment-x402
 
 # ---- D. ECC-internal admin ----
 ecc-tools-cost-audit
