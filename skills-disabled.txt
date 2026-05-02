@@ -1,0 +1,73 @@
+# Skills disabled list — one name per line, lines starting with # are comments.
+# These names are skipped by scripts/update-skills.sh on relink.
+# To re-enable a skill: delete its line, then run `bash scripts/update-skills.sh`.
+
+# ---- A. Duplicates (kept the better version) ----
+continuous-learning            # superseded by continuous-learning-v2
+tdd-workflow                   # superseded by superpowers/test-driven-development
+verification-loop              # superseded by superpowers/verification-before-completion
+
+# ---- B. Industry verticals (RE-ENABLED 2026-05-02 for 300MW project & industrial work) ----
+# carrier-relationship-management
+# customs-trade-compliance
+# energy-procurement
+# inventory-demand-planning
+# logistics-exception-management
+# production-scheduling
+# quality-nonconformance
+# returns-reverse-logistics
+# visa-doc-translate
+# healthcare-cdss-patterns
+# healthcare-emr-patterns
+# healthcare-eval-harness
+# healthcare-phi-compliance
+# hipaa-compliance
+
+# ---- C. Finance / Web3 / Crypto (RE-ENABLED 2026-05-02 for finance projects) ----
+# finance-billing-ops
+# customer-billing-ops
+# investor-materials
+# investor-outreach
+# market-research
+# lead-intelligence
+# llm-trading-agent-security
+# defi-amm-security
+# evm-token-decimals
+# nodejs-keccak256
+# agent-payment-x402
+
+# ---- D. ECC-internal admin ----
+ecc-tools-cost-audit
+automation-audit-ops
+hermes-imports
+nanoclaw-repl
+openclaw-persona-forge
+configure-ecc
+skill-stocktake
+skill-comply
+rules-distill
+research-ops
+email-ops
+messages-ops
+unified-notifications-ops
+project-flow-ops
+
+# ---- E. Niche languages / specialised tooling ----
+perl-patterns
+perl-testing
+perl-security
+pytorch-patterns
+clickhouse-io
+swift-concurrency-6-2
+swift-actor-persistence
+swift-protocol-di-testing
+foundation-models-on-device
+liquid-glass-design
+swiftui-patterns
+dmux-workflows
+nutrient-document-processing
+remotion-video-creation
+manim-video
+gateguard
+connections-optimizer
+social-graph-ranker
