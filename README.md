@@ -30,3 +30,14 @@ Plan maestro técnico-conceptual para un complejo de **Data Center grado militar
 ## Estado del proyecto
 
 Fase **conceptual / prefactibilidad**. Las cifras de CAPEX, MW y áreas son estimaciones de orden de magnitud (clase 5 AACE) para alimentar estudios de prefactibilidad y due diligence inicial.
+
+## ⭐ Documentos autoritativos finales (v3)
+
+Tras varias iteraciones con el cliente, los documentos vigentes son:
+
+- **[`docs/00-master/04-consolidacion-final.md`](docs/00-master/04-consolidacion-final.md)** — visión integral final
+- **[`docs/01-energia/08-sistema-energetico-simplificado.md`](docs/01-energia/08-sistema-energetico-simplificado.md)** — sistema energético lean (sin redundancia innecesaria)
+- **[`docs/04-pisos/00-overview-pisos-v2.md`](docs/04-pisos/00-overview-pisos-v2.md)** — programa de 6 pisos (sin ±0)
+- **[`docs/07-capex-cronograma/05-recalibracion-rionegro-real.md`](docs/07-capex-cronograma/05-recalibracion-rionegro-real.md)** — CAPEX a precios reales Rionegro 2025
+
+Los documentos previos (`01-matriz-energetica.md`, `04-sistema-hibrido-vision-integral.md`, `00-overview-pisos.md`, `01-capex-opex.md`) quedan como referencia histórica del proceso de iteración.
