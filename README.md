@@ -31,13 +31,16 @@ Plan maestro técnico-conceptual para un complejo de **Data Center grado militar
 
 Fase **conceptual / prefactibilidad**. Las cifras de CAPEX, MW y áreas son estimaciones de orden de magnitud (clase 5 AACE) para alimentar estudios de prefactibilidad y due diligence inicial.
 
-## ⭐ Documentos autoritativos finales (v3)
+## ⭐ Documentos autoritativos finales (v4)
 
 Tras varias iteraciones con el cliente, los documentos vigentes son:
 
-- **[`docs/00-master/04-consolidacion-final.md`](docs/00-master/04-consolidacion-final.md)** — visión integral final
-- **[`docs/01-energia/08-sistema-energetico-simplificado.md`](docs/01-energia/08-sistema-energetico-simplificado.md)** — sistema energético lean (sin redundancia innecesaria)
-- **[`docs/04-pisos/00-overview-pisos-v2.md`](docs/04-pisos/00-overview-pisos-v2.md)** — programa de 6 pisos (sin ±0)
-- **[`docs/07-capex-cronograma/05-recalibracion-rionegro-real.md`](docs/07-capex-cronograma/05-recalibracion-rionegro-real.md)** — CAPEX a precios reales Rionegro 2025
+- **[`docs/00-master/04-consolidacion-final.md`](docs/00-master/04-consolidacion-final.md)** — visión integral
+- **[`docs/00-master/05-glosario.md`](docs/00-master/05-glosario.md)** — glosario de terminología
+- **[`docs/01-energia/08-sistema-energetico-simplificado.md`](docs/01-energia/08-sistema-energetico-simplificado.md)** — sistema energético lean (sin redundancia)
+- **[`docs/01-energia/09-capex-equipo-importacion-puesta-marcha.md`](docs/01-energia/09-capex-equipo-importacion-puesta-marcha.md)** — CAPEX sistema eléctrico estricto (equipo + import + commissioning, sin obra civil)
+- **[`docs/04-pisos/00-overview-pisos-v2.md`](docs/04-pisos/00-overview-pisos-v2.md)** — programa de 6 pisos Edificio #1 (sin ±0)
+- **[`docs/04-pisos/09-edificio-2-bunker-sur.md`](docs/04-pisos/09-edificio-2-bunker-sur.md)** — Edificio #2 enterrado en talud sur
+- **[`docs/07-capex-cronograma/06-precios-colombia-real-final.md`](docs/07-capex-cronograma/06-precios-colombia-real-final.md)** — CAPEX consolidado a precios reales Antioquia 2025 (Edif #1 + Edif #2 + sistemas)
 
-Los documentos previos (`01-matriz-energetica.md`, `04-sistema-hibrido-vision-integral.md`, `00-overview-pisos.md`, `01-capex-opex.md`) quedan como referencia histórica del proceso de iteración.
+Los documentos previos quedan como referencia histórica del proceso de iteración.
